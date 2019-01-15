@@ -32,8 +32,7 @@ class Game
       @word = @total_words[rand(0..@total_words.length)].downcase.split('')
       @word = @word[0..@word.length - 3]
       @check_word = @word.dup
-      @total_words = []
-      
+      @total_words = []      
     end
 
     def get_guess_array
@@ -62,8 +61,6 @@ class Game
     end
     def save_game
         File.open("./hangman.yml", "w") { |f| YAML.dump([] <<self, f)}
-
-
     end
 
     def check
@@ -83,7 +80,6 @@ class Game
         puts
         puts "You have #{10 - @turn_count} turns left to guess the word."
         puts
-
     end
 
     def check_win
@@ -96,9 +92,9 @@ class Game
             @win = true
         elsif @turn_count == 10
             puts "you have failed."
+            puts "the word was: #{check_word.join('')}"
             exit
         end
-
     end
 
     def welcome
@@ -145,13 +141,9 @@ class Play
                     @game.player_input
                     @game.check
                     @game.check_win
-                end             
-             
-
-        end
-
+                end          
+             end
     end
-
 end
 
 a = Play.new
