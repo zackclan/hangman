@@ -123,7 +123,7 @@ class Play
         if @game.start_condition == "N"
             @game.word_generator
             @game.get_guess_array
-            print @game.word.join('')
+            #print @game.word.join('')
             puts
             while @game.win == false && @game.turn_count < 10
                 @game.turn_counter
