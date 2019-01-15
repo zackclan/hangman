@@ -1,0 +1,36 @@
+---
+- !ruby/object:Game
+  guess_array:
+  - p
+  - a
+  - n
+  - e
+  - _
+  - _
+  - _
+  - _
+  turn_count: 1
+  guessed_letters:
+  - z
+  win: false
+  start_condition: N
+  total_words: []
+  word:
+  - "*"
+  - "*"
+  - "*"
+  - "*"
+  - l
+  - i
+  - s
+  - t
+  check_word:
+  - p
+  - a
+  - n
+  - e
+  - l
+  - i
+  - s
+  - t
+  guess: z
